@@ -14,6 +14,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    print "#{params[:id]}"
+    @user = User.find(params[:id])
+  end
+
   private
 
   def user_params
